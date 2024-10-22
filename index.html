@@ -3,789 +3,366 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Exclusive HDFC Credit Card Offers</title>
-
+    <title>Riken Amitkumar Patel</title>
     <style>
       * {
-        box-sizing: border-box;
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
       }
-      ul {
-        list-style-type: none;
-      }
+
       body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #f5f5f5;
-        color: #333;
-        line-height: 1.6;
-        max-width: 100vw;
-        overflow-x: hidden;
+        font-family: "Montserrat", sans-serif;
+        transition: background-color 0.5s, color 0.5s;
+        color: var(--body-text);
+        background-color: var(--body-bg);
+        scroll-behavior: smooth; /* Smooth scrolling */
       }
-      /* Header CSS */
-      header {
-        position: relative;
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+      }
+
+      nav ul li {
+        margin: 0 20px;
+      }
+
+      nav ul li {
+        position: relative; /* Positioning for pseudo-element */
+      }
+
+      nav ul li a {
+        color: var(--header-text);
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.2rem;
+        position: relative; /* Positioning for pseudo-element */
+        color: #f1f1f1;
+      }
+
+      nav ul li a::after {
+        content: ""; /* Empty content for the pseudo-element */
+        position: absolute;
+        left: 0;
+        bottom: 0; /* Position at the bottom of the link */
+        width: 100%; /* Full width */
+        height: 2px; /* Height of the underline */
+        background: #ffecec; /* Color of the underline */
+        transform: scaleX(0); /* Start with no width */
+        transition: transform 0.3s ease; /* Transition effect */
+      }
+
+      nav ul li a:hover::after {
+        transform: scaleX(1); /* Scale to full width on hover */
+      }
+
+      /* Hero Section Styling */
+      .hero {
         height: 100vh;
+        background: var(--hero-bg);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: linear-gradient(135deg, #0033a0, #d32f2f);
-        color: white;
         text-align: center;
-        padding: 0 2rem;
+        color: var(--hero-text);
+        margin-top: 60px; /* Added margin to push down the hero section */
       }
 
-      .hero-content h1 {
-        font-size: 3rem;
-        font-weight: bold;
-        margin-bottom: 1rem;
+      .hero h1 {
+        font-size: 4rem;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
       }
 
-      .hero-content p {
-        font-size: 1.25rem;
-        margin-bottom: 1.5rem;
-      }
-
-      /* Navigation */
-      nav ul {
-        display: flex;
-        justify-content: center;
-        padding: 1rem;
-        background-color: #0033a0;
-      }
-
-      nav ul li {
-        margin: 0 1rem;
-      }
-
-      nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 1.2rem;
-        position: relative;
-        padding-bottom: 5px; /* Creates space for the underline */
-      }
-
-      nav ul li a::before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: white;
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 0.3s ease-in-out;
-      }
-
-      nav ul li a:hover::before {
-        transform: scaleX(1);
-      }
-
-      nav ul li a::after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: white;
-        transform: scaleX(0); /* Set to 0 by default */
-        transform-origin: right;
-        transition: transform 0.3s ease-in-out;
-      }
-
-      nav ul li a:hover::after {
-        transform: scaleX(1);
-      }
-
-      /* Credit Cards Section */
-      #cards {
-        text-align: center;
-        padding: 3rem 2rem;
-        background-color: white;
-      }
-
-      #cards h2 {
-        font-size: 2.5rem;
-        color: #0033a0;
-        margin-bottom: 2rem;
-      }
-
-      .credit-cards {
-        display: grid;
-        grid-template-columns: repeat(
-          auto-fit,
-          minmax(250px, 1fr)
-        ); /* Responsive cards */
-        gap: 2rem;
-        justify-items: center;
-      }
-
-      .card {
-        background: #fff;
-        border-radius: 12px;
-        padding: 1.5rem;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-        cursor: pointer;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        text-align: center;
-        width: 100%;
-        max-width: 300px;
-      }
-
-      .card h3 {
+      .hero p {
         font-size: 1.5rem;
-        margin-bottom: 1rem;
-        color: #0033a0;
+        margin-bottom: 50px;
       }
 
-      .card p {
-        font-size: 1.1rem;
-        color: #555;
-      }
-
-      .card:hover {
-        transform: scale(1.05);
-        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-      }
-
-      /* Card Details Section */
-      .card-details-section {
-        padding: 4rem 2rem;
-        background-color: #f0f4f7;
-        border-radius: 15px;
-        margin: 2rem 0;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      /* General Section Styling */
+      section {
+        padding: 100px 20px;
         text-align: center;
+        background-color: var(--section-bg);
+        color: var(--section-text);
+        border-bottom: 5px solid var(--section-border);
+        transition: all 0.3s ease;
       }
 
-      .card-details-section h2 {
+      section h2 {
         font-size: 2.5rem;
-        color: #0033a0;
-        margin-bottom: 1.5rem;
+        margin-bottom: 30px;
+        text-transform: uppercase; /* Added uppercase for a cleaner look */
       }
 
-      #details-content {
+      section p {
         font-size: 1.2rem;
-        color: #555;
         line-height: 1.6;
-        text-align: left;
-        padding: 1.5rem;
-        background-color: white;
+        margin-bottom: 40px;
+      }
+
+      /* About Section Styling */
+      .about-content {
+        max-width: 800px;
+        margin: auto;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px;
         border-radius: 10px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        max-width: 800px;
-        margin: 0 auto; /* Center the content */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
       }
 
-      /* Styling for lists in card details */
-      #details-content ul {
-        margin: 1.5rem 0;
-        padding-left: 1.5rem;
-        list-style-type: disc;
+      .about-content:hover {
+        transform: scale(1.02);
       }
 
-      #details-content ul li {
-        font-size: 1.2rem;
-        color: #0033a0;
-        margin-bottom: 0.75rem;
-      }
-
-      /* Add headings inside details */
-      #details-content h3 {
-        font-size: 2rem;
-        color: #d32f2f;
-        margin-bottom: 1rem;
-        font-weight: bold;
-        text-transform: uppercase;
-      }
-
-      /* Transition effect  */
-      #details-content {
-        transition: all 0.3s ease-in-out;
-      }
-
-      /* Responsive Mobile */
-      @media (max-width: 768px) {
-        #details-content {
-          font-size: 1.1rem;
-          padding: 1rem;
-        }
-
-        #details-content h3 {
-          font-size: 1.6rem;
-        }
-
-        #details-content ul {
-          padding-left: 1rem;
-        }
-
-        .card-details-section {
-          padding: 2rem 1rem;
-        }
-      }
-
-      /* Apply Section */
-      #apply {
-        padding: 2rem;
-        text-align: center;
-      }
-
-      #apply h2 {
-        font-size: 2rem;
-        color: #0033a0;
-      }
-
-      button {
-        background: linear-gradient(135deg, #0033a0, #00217d);
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        font-size: 16px;
-      }
-
-      button:hover {
-        background: linear-gradient(135deg, #00217d, #0033a0);
-        transform: scale(1.05);
-      }
-
-      /* FAQ Section */
-      .faq {
-        padding: 3rem 2rem;
-        background-color: white;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        max-width: 800px;
-        margin: 2rem auto;
-      }
-
-      .faq h2 {
-        font-size: 2.5rem;
-        text-align: center;
-        margin-bottom: 2rem;
-      }
-
-      .faq-item h3 {
-        font-size: 1.6rem;
-        color: #0033a0;
-      }
-
-      .faq-item p {
-        font-size: 1.2rem;
-        color: #555;
-        line-height: 1.5;
-      }
-
-      /* Popup +ive */
-      .popup {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.7); /* Semi-transparent dark background */
-        justify-content: center;
-        align-items: center;
-        z-index: 1000;
-      }
-
-      .popup-content {
-        background-color: #fff;
-        padding: 2rem;
-        border-radius: 12px;
-        text-align: center;
-        width: 90%;
+      /* Education Section */
+      .education-content {
+        margin: auto;
         max-width: 600px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+        padding: 20px;
+        border: 2px solid var(--section-border);
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
       }
 
-      #popup-close {
-        cursor: pointer;
-        font-size: 2rem;
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        color: #0033a0;
+      .education-content ul {
+        list-style-type: none; /* Remove bullets */
       }
 
-      #selected-card-message,
-      #deals-message {
+      .education-content ul li {
+        margin: 15px 0; /* Add spacing between items */
+      }
+
+      .education-content a {
+        color: var(--link-color);
+        text-decoration: none; /* Remove underline */
+      }
+
+      .education-content a:hover {
+        border-bottom: 2px solid var(--link-color); /* Hover effect */
+        transform: scale(1.03);
+      }
+
+      /* Social Media Section */
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        margin-top: 30px;
+      }
+
+      .social-icons img {
+        width: 50px;
+        height: 50px;
+        transition: transform 0.3s, filter 0.3s;
+        margin-top: 2rem;
+      }
+
+      .social-icons img:hover {
+        transform: scale(1.2);
+        filter: brightness(1.3);
+      }
+
+      /* Contact Section */
+      .contact {
+        margin-top: 20px;
         font-size: 1.2rem;
-        margin: 1rem 0;
-        color: #333;
       }
 
-      #popup-ok {
-        background-color: #0033a0;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        margin-top: 1rem;
-        font-size: 1rem;
-        transition: background-color 0.3s ease;
+      .contact a {
+        color: var(--link-color);
+        text-decoration: underline; /* Added underline for links */
+        font-weight: bold;
       }
 
-      #popup-ok:hover {
-        background-color: #00217d;
+      /* Light Mode Variables */
+      :root {
+        --header-bg: #f8f8f8;
+        --header-text: #333;
+        --hero-bg: linear-gradient(135deg, #ff8a00, #e52e71);
+        --hero-text: #fff;
+        --section-bg: #ffffff;
+        --section-text: #333;
+        --section-border: #e52e71;
+        --link-color: #e52e71;
+        --body-bg: #f0f0f0;
+        --body-text: #333;
       }
 
-      /* Footer Styling */
-      footer {
-        background-color: #0033a0; /* Matches the header color */
-        color: white;
-        padding: 3rem 2rem;
-        text-align: center;
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        border-top: 5px solid #d32f2f; /* Adds a border to make the footer pop */
+      /* Dark Mode Variables */
+      .dark-mode {
+        --header-bg: #2e2e2e;
+        --header-text: #f1f1f1;
+        --hero-bg: linear-gradient(135deg, #212121, #1a1a1a);
+        --hero-text: #fff;
+        --section-bg: #292929;
+        --section-text: #f1f1f1;
+        --section-border: #ff5722;
+        --link-color: #ff5722;
+        --body-bg: #121212;
+        --body-text: #e0e0e0;
       }
 
-      .footer-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-
-      .footer-text {
-        flex: 1;
-        font-size: 1rem;
-        color: white;
-      }
-
-      .footer-text p {
-        margin: 0.5rem 0;
-      }
-
-      .footer-text a {
-        color: #d32f2f; /* Vibrant red color for links */
-        text-decoration: none;
-        margin-left: 0.5rem;
-      }
-
-      .footer-text a:hover {
-        text-decoration: underline;
-      }
-
-      .footer-links {
-        flex: 1;
-        text-align: right;
-      }
-
-      .footer-links ul {
-        list-style: none;
-        display: flex;
-        justify-content: flex-end;
-        gap: 2rem;
-      }
-
-      .footer-links li {
-        font-size: 1rem;
-      }
-
-      .footer-links li a {
-        color: #ffffff;
-        text-decoration: none;
-      }
-
-      .footer-links li a:hover {
-        color: #d32f2f; /* Vibrant hover color */
-        text-decoration: underline;
-      }
-
-      /* Responsive Design for Tablets and Smaller Screens */
-      @media (max-width: 1024px) {
-        .footer-content {
-          flex-direction: column;
-          text-align: center;
-        }
-
-        .footer-text {
-          margin-bottom: 1.5rem;
-        }
-
-        .footer-links ul {
-          justify-content: center;
-          gap: 1.5rem;
-        }
-
-        .footer-links li {
-          font-size: 1.1rem;
-        }
-      }
-
-      /* Responsive Mobile  */
       @media (max-width: 768px) {
-        footer {
-          padding: 2rem 1rem;
+        .hero h1 {
+          font-size: 2.5rem; /* Responsive font size */
         }
-
-        .footer-content {
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .footer-text {
-          margin-bottom: 1rem;
-        }
-
-        .footer-links ul {
-          flex-direction: column;
-          gap: 1rem;
-          justify-content: center;
-        }
-
-        .footer-links li {
-          font-size: 1rem;
-        }
-
-        .footer-text a {
-          display: block;
-          margin-top: 0.5rem;
-        }
-      }
-
-      /* Responsive Design for Small Mobile Screens */
-      @media (max-width: 480px) {
-        .footer-text p {
-          font-size: 0.9rem;
-        }
-
-        .footer-links li a {
-          font-size: 0.9rem;
-        }
-      }
-
-      /* Responsive Design */
-      @media (max-width: 768px) {
-        .credit-cards {
-          grid-template-columns: 1fr;
-        }
-
-        .faq-item h3 {
-          font-size: 1.4rem;
-        }
-
-        .faq-item p {
-          font-size: 1rem;
-        }
-
-        #popup-ok {
-          width: 100%;
+        section {
+          padding: 50px 10px; /* Reduce padding on smaller screens */
         }
       }
     </style>
   </head>
   <body>
-    <header>
-      <div class="hero-section">
-        <div class="hero-content">
-          <h1>Exclusive HDFC Credit Card Offers</h1>
-          <p>
-            Discover the best credit cards for all your needs. Apply now and
-            enjoy amazing benefits!
-          </p>
-        </div>
-      </div>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>Riken Amitkumar Patel</h1>
+      <div class="scroll-down"></div>
+      <!-- Navigation -->
       <nav>
         <ul>
-          <li><a href="#cards">Credit Cards</a></li>
-          <li><a href="#apply">Apply Now</a></li>
-          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-    </header>
+    </section>
 
-    <main>
-      <!-- Credit Cards Section -->
-      <section id="cards">
-        <h2>Select a Credit Card</h2>
-        <div class="credit-cards">
-          <div class="card" id="irctc-card" data-card="HDFC IRCTC Credit Card">
-            <h3>HDFC IRCTC Credit Card</h3>
-            <p>₹500 worth welcome voucher on card activation.</p>
-          </div>
-          <div class="card" id="rupay-card" data-card="HDFC RuPay Credit Card">
-            <h3>HDFC RuPay Credit Card</h3>
-            <p>3% cashback points on groceries and supermarkets.</p>
-          </div>
-          <div
-            class="card"
-            id="marriott-card"
-            data-card="Marriott Bonvoy HDFC Credit Card"
+    <!-- About Section -->
+    <section id="about" class="about">
+      <h2 style="margin-bottom: 30px; font-size: 3rem; color: #e52e71">
+        About Me
+      </h2>
+      <div
+        class="about-content"
+        style="border: 2px solid var(--section-border)"
+      >
+        <p style="font-size: 1.5rem; line-height: 1.6; margin-bottom: 20px">
+          Hello! I'm <strong>Riken</strong>, currently studying at
+          <a href="https://www.georgiancollege.ca/" target="_blank"
+            >Georgian College</a
           >
-            <h3>Marriott Bonvoy HDFC Credit Card</h3>
-            <p>1 Free Night Award at Marriott hotels.</p>
-          </div>
-          <div
-            class="card"
-            id="shoppersstop-card"
-            data-card="HDFC Shoppers Stop Credit Card"
-          >
-            <h3>HDFC Shoppers Stop Credit Card</h3>
-            <p>3X rewards on Shoppers Stop labels.</p>
-          </div>
-          <div
-            class="card"
-            id="millennia-card"
-            data-card="Millennia Credit Card"
-          >
-            <h3>Millennia Credit Card</h3>
-            <p>5% Cashback on Amazon, Flipkart, and more.</p>
-          </div>
-          <div
-            class="card"
-            id="indianoil-card"
-            data-card="IndianOil HDFC Credit Card"
-          >
-            <h3>IndianOil HDFC Credit Card</h3>
-            <p>Earn up to 50 liters of free fuel annually.</p>
-          </div>
-          <div
-            class="card"
-            id="swiggy-card"
-            data-card="Swiggy HDFC Credit Card"
-          >
-            <h3>Swiggy HDFC Credit Card</h3>
-            <p>10% Cashback on Swiggy orders.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Information Section for the Selected Card -->
-      <section id="card-details" class="card-details-section">
-        <h2>Card Details</h2>
-        <div id="details-content">
-          <p>Select a card to see its details.</p>
-        </div>
-      </section>
-
-      <!-- Apply Section -->
-      <section id="apply">
-        <h2>Apply for a Credit Card</h2>
-        <p>
-          Ready to enjoy these amazing benefits? Click the button below to
-          apply!
+          (Barrie campus), pursuing
+          <strong>Computer Systems Technician and Networking (CSTN)</strong>. I
+          reside at
+          <strong>132 Thrushwood Dr, Barrie, L4N 0Z1, ON, Canada</strong>.
         </p>
-        <button id="apply-button">Apply Now</button>
-      </section>
-
-      <!-- FAQ Section -->
-      <section id="faq" class="faq">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-item">
-          <h3>How do I apply for a credit card?</h3>
-          <p>You can apply online by clicking the 'Apply Now' button above.</p>
-        </div>
-        <div class="faq-item">
-          <h3>What documents do I need to apply?</h3>
-          <p>You will need proof of identity, address, and income.</p>
-        </div>
-        <div class="faq-item">
-          <h3>What is the interest rate on these cards?</h3>
-          <p>
-            Interest rates vary by card. Please check the respective card
-            details.
-          </p>
-        </div>
-        <div class="faq-item">
-          <h3>Can I upgrade my card later?</h3>
-          <p>Yes, you can request an upgrade after a year of usage.</p>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer Section -->
-    <footer>
-      <div class="footer-content">
-        <div class="footer-text">
-          <p>&copy; 2024 Credit Card Offers. All rights reserved.</p>
-          <p>
-            <a href="mailto:rikenpatel2005@gmail.com">Contact us</a> |
-            <a href="#feedback">Give Feedback</a>
-          </p>
-        </div>
-        <div class="footer-links">
-          <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">Sitemap</a></li>
-          </ul>
-        </div>
       </div>
-    </footer>
 
-    <!-- Pop-up  Confirmation -->
-    <div id="confirmation-popup" class="popup">
-      <div class="popup-content">
-        <span id="popup-close">&times;</span>
-        <h2>We will process your request to the bank</h2>
-        <p id="selected-card-message"></p>
-        <p id="deals-message"></p>
-        <button id="popup-ok">OK</button>
+      <!-- Social Media Section -->
+
+      <div class="social-icons">
+        <a
+          href="https://www.facebook.com/profile.php?id=100079310811860&mibextid=ZbWKwL"
+          target="_blank"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+            alt="Facebook"
+          />
+        </a>
+        <a href="https://github.com/OGpatelriken" target="_blank">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
+            alt="GitHub"
+          />
+        </a>
+        <a href="https://x.com/iconic_patel" target="_blank">
+          <img
+            src="https://about.x.com/content/dam/about-twitter/x/large-x-logo.png.twimg.1920.png"
+            alt="X.com"
+          />
+        </a>
       </div>
-    </div>
+    </section>
 
+    <!-- Education Section -->
+    <section id="education">
+      <h2>Education</h2>
+      <div class="education-content">
+        <ul>
+          <li>
+            🎓
+            <a href="https://www.georgiancollege.ca/" target="_blank"
+              >Georgian College *</a
+            >
+          </li>
+          <li>
+            🎓
+            <a href="https://www.vatsalyainternational.org/" target="_blank"
+              >Vatsalya International School</a
+            >
+          </li>
+          <li>
+            🎓
+            <a href="https://www.saraswatiborsad.org/" target="_blank"
+              >Saraswati Vidyalaya</a
+            >
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>If you'd like to get in touch, feel free to reach out at:</p>
+      <p class="contact">
+        <a href="mailto:rikenpatel2005@gmail.com">rikenpatel2005@gmail.com</a>
+      </p>
+      <p>
+        You can also find me on
+        <a
+          href="https://www.google.com/maps?q=132+Thrushwood+Dr,+Barrie,+L4N+0Z1,+ON,+Canada"
+          target="_blank"
+          >Google Maps</a
+        >.
+      </p>
+    </section>
+
+    <!-- JavaScript for Smooth Scrolling -->
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const cards = document.querySelectorAll(".card");
-        const detailsContent = document.getElementById("details-content");
-        const applyButton = document.getElementById("apply-button");
-        const popup = document.getElementById("confirmation-popup");
-        const popupMessage = document.getElementById("selected-card-message");
-        const dealsMessage = document.getElementById("deals-message");
-        const popupClose = document.getElementById("popup-close");
-        const popupOk = document.getElementById("popup-ok");
+      // Function to check the current time and set theme accordingly
+      function setThemeBasedOnTime() {
+        const now = new Date();
+        const hours = now.getHours();
 
-        let selectedCard = null;
+        // Define sunrise and sunset times (24-hour format)
+        const sunrise = 6; // 6 AM
+        const sunset = 18; // 6 PM
 
-        // Cleck card selection
-        cards.forEach((card) => {
-          card.addEventListener("click", () => {
-            selectedCard = card.getAttribute("data-card");
-            let cardDetails = "";
+        // Switch between light and dark mode based on time
+        if (hours >= sunrise && hours < sunset) {
+          document.body.classList.remove("dark-mode");
+          document.body.classList.add("light-mode");
+        } else {
+          document.body.classList.remove("light-mode");
+          document.body.classList.add("dark-mode");
+        }
+      }
 
-            switch (selectedCard) {
-              case "HDFC IRCTC Credit Card":
-                cardDetails = `
-            <h3>HDFC IRCTC Credit Card</h3>
-            <p>The IRCTC HDFC Bank Credit Card is perfect for train travelers. For a low annual fee, you get extra reward points when booking tickets on IRCTC platforms, a waiver on IRCTC transaction fees, and access to executive railway lounges.</p>
-            <ul>
-              <li>Welcome voucher worth ₹500 on card activation</li>
-              <li>Reward points for every ₹100 spent on IRCTC ticketing website</li>
-              <li>Cashback on train ticket bookings via HDFC Bank SmartBuy</li>
-            </ul>`;
-                break;
-
-              case "HDFC RuPay Credit Card":
-                cardDetails = `
-            <h3>HDFC RuPay Credit Card</h3>
-            <p>The HDFC Bank UPI RuPay Credit Card is a virtual card that you can link to your UPI ID for easy UPI payments and regular transactions.</p>
-            <ul>
-              <li>Rupay Card – Pay Via UPI</li>
-              <li>3% Cashpoints on Groceries, SuperMarket & More</li>
-              <li>2% Cashpoints on Utility spends</li>
-            </ul>`;
-                break;
-
-              case "Marriott Bonvoy HDFC Credit Card":
-                cardDetails = `
-            <h3>Marriott Bonvoy HDFC Credit Card</h3>
-            <p>The Marriott Bonvoy HDFC Bank Credit Card offers premium benefits like discounts, hotel points, restaurant meals, and spa access at Marriott Bonvoy hotels.</p>
-            <ul>
-              <li>1 Free Night Award on Joining fee realization</li>
-              <li>Complimentary Marriott Bonvoy Silver Elite Status</li>
-              <li>10 Elite Night Credits (ENCs) under the Marriott Bonvoy Program</li>
-            </ul>`;
-                break;
-
-              case "HDFC Shoppers Stop Credit Card":
-                cardDetails = `
-            <h3>HDFC Shoppers Stop Credit Card</h3>
-            <p>The HDFC Shoppers Stop Credit Card is great for shoppers. You earn rewards when you spend on Shoppers Stop’s private label brands and other purchases.</p>
-            <ul>
-              <li>Pay via UPI – Rupay Card</li>
-              <li>3X Rewards on Shoppers Stop labels – 2.4% back</li>
-              <li>₹500 Welcome Voucher on Shopper Stop bill</li>
-            </ul>`;
-                break;
-
-              case "Millennia Credit Card":
-                cardDetails = `
-            <h3>Millennia Credit Card</h3>
-            <p>The Best CashBack Credit Card.</p>
-            <ul>
-              <li>5% Cashback on Amazon, BookMyShow, Cult.fit, Flipkart, Myntra, Sony LIV, Swiggy, Tata CLiQ, Uber, and Zomato</li>
-              <li>1% cashback on all other spends (except Fuel) including EMI & Wallet transactions</li>
-              <li>₹1000 worth gift vouchers on spends of ₹1,00,000 and above in each calendar quarter</li>
-            </ul>`;
-                break;
-
-              case "IndianOil HDFC Credit Card":
-                cardDetails = `
-            <h3>IndianOil HDFC Credit Card</h3>
-            <p>Fuel Benefits. Ready For You.</p>
-            <ul>
-              <li>Earn up to 50 Liters of Free fuel annually</li>
-              <li>5% of your spends as Fuel Points at IndianOil outlets, Groceries and Bill Payments</li>
-              <li>1 Fuel Point for every Rs. 150 spent on all other purchases</li>
-              <li>1% Fuel Surcharge waiver</li>
-            </ul>`;
-                break;
-
-              case "Swiggy HDFC Credit Card":
-                cardDetails = `
-            <h3>Swiggy HDFC Credit Card</h3>
-            <p>Delightful Rewards. Ready For You.</p>
-            <ul>
-              <li>10% Cashback on Swiggy application (Food ordering, Instamart, Dineout & Genie)</li>
-              <li>5% Cashback on online spends across top brands</li>
-              <li>1% Cashback on other categories</li>
-              <li>Complimentary Swiggy One Membership for 3 months on card activation</li>
-            </ul>`;
-                break;
-
-              default:
-                cardDetails = "<p>No details available.</p>";
-            }
-
-            detailsContent.innerHTML = cardDetails;
-
-            // Scroll to the details section
-            document
-              .getElementById("card-details")
-              .scrollIntoView({ behavior: "smooth" });
-          });
-        });
-
-        // Check apply button click
-        applyButton.addEventListener("click", () => {
-          if (selectedCard) {
-            popupMessage.textContent = `We will process your request for the ${selectedCard} to the bank.`;
-            dealsMessage.textContent =
-              "Deals Earned: 10% Cashback, Free Lounge Access, etc.";
-            popup.style.display = "flex";
-          } else {
-            alert("Please select a credit card first!");
-          }
-        });
-
-        // Close popup
-        popupClose.addEventListener("click", () => {
-          popup.style.display = "none";
-        });
-
-        popupOk.addEventListener("click", () => {
-          popup.style.display = "none";
-        });
-      });
-
-      // Smooth Scroll for Header Navigation Links
-      document.querySelectorAll("nav ul li a").forEach((anchor) => {
+      // Smooth scrolling for internal links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
         anchor.addEventListener("click", function (e) {
           e.preventDefault();
 
-          // href attribute of the clicked link
-          const targetSection = document.querySelector(
-            this.getAttribute("href")
-          );
-
-          // Smooth scroll to the section
-          targetSection.scrollIntoView({
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
             behavior: "smooth",
-            block: "start",
           });
         });
       });
+
+      // Call the function to set the theme on page load
+      setThemeBasedOnTime();
+
+      // Optionally, you can set an interval to update the theme in case the page is open for a long time
+      setInterval(setThemeBasedOnTime, 60000); // Check every minute
     </script>
   </body>
 </html>
