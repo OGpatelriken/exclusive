@@ -6,223 +6,207 @@
     <title>Riken Amitkumar Patel</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=location_on" />
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-      body {
-        font-family: "Montserrat", sans-serif;
-        transition: background-color 0.5s, color 0.5s;
-        color: var(--body-text);
-        background-color: var(--body-bg);
-        scroll-behavior: smooth; /* Smooth scrolling */
-      }
+  body {
+    font-family: "Montserrat", sans-serif;
+    transition: background-color 0.5s, color 0.5s;
+    color: var(--body-text);
+    background-color: var(--body-bg);
+    scroll-behavior: smooth; /* Smooth scrolling */
+  }
 
-      nav ul {
-        display: flex;
-        justify-content: center;
-        list-style: none;
-      }
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
 
-      nav ul li {
-        margin: 0 20px;
-      }
+  nav ul li {
+    margin: 0 20px;
+    position: relative; /* Positioning for pseudo-element */
+  }
 
-      nav ul li {
-        position: relative; /* Positioning for pseudo-element */
-      }
+  nav ul li a {
+    color: var(--header-text);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    position: relative; /* Positioning for pseudo-element */
+    color: #f1f1f1;
+  }
 
-      nav ul li a {
-        color: var(--header-text);
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 1.2rem;
-        position: relative; /* Positioning for pseudo-element */
-        color: #f1f1f1;
-      }
+  nav ul li a::after {
+    content: ""; /* Empty content for the pseudo-element */
+    position: absolute;
+    left: 0;
+    bottom: 0; /* Position at the bottom of the link */
+    width: 100%; /* Full width */
+    height: 2px; /* Height of the underline */
+    background: #ffecec; /* Color of the underline */
+    transform: scaleX(0); /* Start with no width */
+    transition: transform 0.3s ease; /* Transition effect */
+  }
 
-      nav ul li a::after {
-        content: ""; /* Empty content for the pseudo-element */
-        position: absolute;
-        left: 0;
-        bottom: 0; /* Position at the bottom of the link */
-        width: 100%; /* Full width */
-        height: 2px; /* Height of the underline */
-        background: #ffecec; /* Color of the underline */
-        transform: scaleX(0); /* Start with no width */
-        transition: transform 0.3s ease; /* Transition effect */
-      }
+  nav ul li a:hover::after {
+    transform: scaleX(1); /* Scale to full width on hover */
+  }
 
-      nav ul li a:hover::after {
-        transform: scaleX(1); /* Scale to full width on hover */
-      }
+  /* Hero Section Styling */
+  .hero {
+    height: 100vh;
+    background: var(--hero-bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--hero-text);
+  }
 
-      /* Hero Section Styling */
-      .hero {
-        height: 100vh;
-        background: var(--hero-bg);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: var(--hero-text);
-        /* margin-top: 60px; Added margin to push down the hero section */
-      }
+  .hero h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
 
-      .hero h1 {
-        font-size: 4rem;
-        margin-bottom: 20px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-      }
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 50px;
+  }
 
-      .hero p {
-        font-size: 1.5rem;
-        margin-bottom: 50px;
-      }
+  /* General Section Styling */
+  section {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: var(--section-bg);
+    color: var(--section-text);
+    border-bottom: 5px solid var(--section-border);
+    transition: all 0.3s ease;
+  }
 
-      /* General Section Styling */
-      section {
-        padding: 100px 20px;
-        text-align: center;
-        background-color: var(--section-bg);
-        color: var(--section-text);
-        border-bottom: 5px solid var(--section-border);
-        transition: all 0.3s ease;
-      }
+  section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-transform: uppercase; /* Added uppercase for a cleaner look */
+  }
 
-      section h2 {
-        font-size: 2.5rem;
-        margin-bottom: 30px;
-        text-transform: uppercase; /* Added uppercase for a cleaner look */
-      }
+  section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
 
-      section p {
-        font-size: 1.2rem;
-        line-height: 1.6;
-        margin-bottom: 40px;
-      }
+  /* About Section Styling */
+  .about-content {
+    max-width: 800px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
 
-      /* About Section Styling */
-      .about-content {
-        max-width: 800px;
-        margin: auto;
-        background: rgba(255, 255, 255, 0.9);
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s;
-      }
+  .about-content:hover {
+    transform: scale(1.02);
+  }
 
-      .about-content:hover {
-        transform: scale(1.02);
-      }
+  /* Education Section */
+  .education-content {
+    margin: auto;
+    max-width: 600px;
+    padding: 20px;
+    border: 2px solid var(--section-border);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
 
-      /* Education Section */
-      .education-content {
-        margin: auto;
-        max-width: 600px;
-        padding: 20px;
-        border: 2px solid var(--section-border);
-        border-radius: 10px;
-        background: rgba(255, 255, 255, 0.9);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s;
-      }
+  .education-content ul {
+    list-style-type: none; /* Remove bullets */
+  }
 
-      .education-content ul {
-        list-style-type: none; /* Remove bullets */
-      }
+  .education-content ul li {
+    margin: 15px 0; /* Add spacing between items */
+  }
 
-      .education-content ul li {
-        margin: 15px 0; /* Add spacing between items */
-      }
+  .education-content a {
+    color: var(--link-color);
+    text-decoration: none; /* Remove underline */
+  }
 
-      .education-content a {
-        color: var(--link-color);
-        text-decoration: none; /* Remove underline */
-      }
+  .education-content a:hover {
+    border-bottom: 2px solid var(--link-color); /* Hover effect */
+    transform: scale(1.03);
+  }
 
-      .education-content a:hover {
-        border-bottom: 2px solid var(--link-color); /* Hover effect */
-        transform: scale(1.03);
-      }
+  /* Social Media Section */
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 30px;
+  }
 
-      /* Social Media Section */
-      .social-icons {
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-        margin-top: 30px;
-      }
+  .social-icons img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s, filter 0.3s;
+    margin-top: 2rem;
+  }
 
-      .social-icons img {
-        width: 50px;
-        height: 50px;
-        transition: transform 0.3s, filter 0.3s;
-        margin-top: 2rem;
-      }
+  .social-icons img:hover {
+    transform: scale(1.2);
+    filter: brightness(1.3);
+  }
 
-      .social-icons img:hover {
-        transform: scale(1.2);
-        filter: brightness(1.3);
-      }
+  /* Contact Section */
+  .contact {
+    margin-top: 20px;
+    font-size: 1.2rem;
+  }
 
-      /* Contact Section */
-      .contact {
-        margin-top: 20px;
-        font-size: 1.2rem;
-      }
+  .contact a {
+    color: var(--link-color);
+    text-decoration: underline; /* Added underline for links */
+    font-weight: bold;
+  }
 
-      .contact a {
-        color: var(--link-color);
-        text-decoration: underline; /* Added underline for links */
-        font-weight: bold;
-      }
+  /* Light Mode Variables */
+  :root {
+    --header-bg: #f8f8f8;
+    --header-text: #333;
+    --hero-bg: linear-gradient(135deg, #ff8a00, #e52e71);
+    --hero-text: #fff;
+    --section-bg: #ffffff;
+    --section-text: #333;
+    --section-border: #e52e71;
+    --link-color: #e52e71;
+    --body-bg: #f0f0f0;
+    --body-text: #333;
+  }
 
-      /* Light Mode Variables */
-      :root {
-        --header-bg: #f8f8f8;
-        --header-text: #333;
-        --hero-bg: linear-gradient(135deg, #ff8a00, #e52e71);
-        --hero-text: #fff;
-        --section-bg: #ffffff;
-        --section-text: #333;
-        --section-border: #e52e71;
-        --link-color: #e52e71;
-        --body-bg: #f0f0f0;
-        --body-text: #333;
-      }
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.5rem; /* Responsive font size */
+    }
+    section {
+      padding: 50px 10px; /* Reduce padding on smaller screens */
+    }
+  }
 
-      /* Dark Mode Variables */
-      .dark-mode {
-        --header-bg: #2e2e2e;
-        --header-text: #f1f1f1;
-        --hero-bg: linear-gradient(135deg, #212121, #1a1a1a);
-        --hero-text: #fff;
-        --section-bg: #292929;
-        --section-text: #f1f1f1;
-        --section-border: #ff5722;
-        --link-color: #ff5722;
-        --body-bg: #121212;
-        --body-text: #e0e0e0;
-      }
+  #linkLocation {
+    text-decoration: none;
+  }
+</style>
 
-      @media (max-width: 768px) {
-        .hero h1 {
-          font-size: 2.5rem; /* Responsive font size */
-        }
-        section {
-          padding: 50px 10px; /* Reduce padding on smaller screens */
-        }
-      }
-
-      #linkLocation{
-        text-decoration: none;
-      }
-    </style>
   </head>
   <body>
     <!-- Hero Section -->
@@ -252,28 +236,20 @@
           in <strong>ON, Canada</strong>.
         </p>
         <div class="social-icons">
-        <a
-          href="https://www.facebook.com/profile.php?id=100079310811860&mibextid=ZbWKwL"
-          target="_blank"
-        >
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-            alt="Facebook"
-          />
-        </a>
-        <a href="https://github.com/OGpatelriken" target="_blank">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg"
-            alt="GitHub"
-          />
-        </a>
-        <a href="https://x.com/iconic_patel" target="_blank">
-          <img
-            src="https://about.x.com/content/dam/about-twitter/x/large-x-logo.png.twimg.1920.png"
-            alt="X.com"
-          />
-        </a>
-      </div>
+  <a href="https://www.linkedin.com/in/riken-patel007/" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/LinkedIn_Logo.svg" alt="LinkedIn" style="zoom: 2;" />
+  </a>
+  <a href="https://github.com/OGpatelriken" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" />
+  </a>
+  <a href="https://x.com/iconic_patel" target="_blank">
+    <img src="https://about.x.com/content/dam/about-twitter/x/large-x-logo.png.twimg.1920.png" alt="X" />
+  </a>
+  <a href="https://www.facebook.com/profile.php?id=100079310811860&mibextid=ZbWKwL" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
+  </a>
+</div>
+
       </div>
 
       <!-- Social Media Section -->
@@ -288,13 +264,14 @@
       <h2>Contact</h2>
       <p>Feel free to reach out at:</p>
       <p class="contact">
-        <a href="mailto:business.riken@gmail.com">business.riken@gmail.com</a>
+        <a href="mailto:rikenpatel2005@gmail.com">business.riken@gmail.com</a>
       </p>
       
     </section>
 
     <!-- JavaScript for Smooth Scrolling -->
     <script>
+      
       // Function to check the current time and set theme accordingly
       function setThemeBasedOnTime() {
         const now = new Date();
