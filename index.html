@@ -271,7 +271,17 @@
 
     <!-- JavaScript for Smooth Scrolling -->
     <script>
-      
+      <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Check if the page has been refreshed already in the current session
+    if (!sessionStorage.getItem("refreshed")) {
+      // If not refreshed, set the flag and reload the page
+      sessionStorage.setItem("refreshed", "true");
+      location.reload();
+    }
+  });
+</script>
+
       // Function to check the current time and set theme accordingly
       function setThemeBasedOnTime() {
         const now = new Date();
